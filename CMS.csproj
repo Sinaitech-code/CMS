@@ -1,0 +1,1557 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4F0A8320-580F-4E45-9B8B-1C5572BBF705}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CMS</RootNamespace>
+    <AssemblyName>CMS</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44332</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="accounts\accountsdefault.aspx" />
+    <Content Include="accounts\imgs\bg_form_head.jpg" />
+    <Content Include="accounts\imgs\bg_header.jpg" />
+    <Content Include="accounts\imgs\form_head_left.jpg" />
+    <Content Include="accounts\imgs\form_head_right.jpg" />
+    <Content Include="accounts\imgs\icon_calendar.jpg" />
+    <Content Include="accounts\imgs\logo.jpg" />
+    <Content Include="accounts\imgs\main_navi_bg.gif" />
+    <Content Include="accounts\imgs\sub_navi_bg_mo.gif" />
+    <Content Include="accounts\imgs\sub_navi_bg_n.gif" />
+    <Content Include="accounts\includes\css\login.css" />
+    <Content Include="accounts\includes\css\styles.css" />
+    <Content Include="accounts\view_accounts.aspx" />
+    <Content Include="accounts\view_account_details.aspx" />
+    <Content Include="accounts\view_expences_status.aspx" />
+    <Content Include="accounts\view_expences_status_details.aspx" />
+    <Content Include="accounts\view_purchase_orders.aspx" />
+    <Content Include="accounts\view_purchase_order_details.aspx" />
+    <Content Include="admindefault.aspx" />
+    <Content Include="AdminHeader.ascx" />
+    <Content Include="admin\add_admin.aspx" />
+    <Content Include="admin\add_client.aspx" />
+    <Content Include="admin\add_department.aspx" />
+    <Content Include="admin\add_emp_grade.aspx" />
+    <Content Include="admin\admindefault.aspx" />
+    <Content Include="admin\assign_modules_to_admin.aspx" />
+    <Content Include="admin\edit_admin.aspx" />
+    <Content Include="admin\edit_client.aspx" />
+    <Content Include="admin\edit_department.aspx" />
+    <Content Include="admin\edit_emp_grade.aspx" />
+    <Content Include="admin\image.aspx" />
+    <Content Include="admin\imgs\bg_form_head.jpg" />
+    <Content Include="admin\imgs\bg_header.jpg" />
+    <Content Include="admin\imgs\form_head_left.jpg" />
+    <Content Include="admin\imgs\form_head_right.jpg" />
+    <Content Include="admin\imgs\icon_calendar.jpg" />
+    <Content Include="admin\imgs\logo.jpg" />
+    <Content Include="admin\imgs\main_navi_bg.gif" />
+    <Content Include="admin\imgs\sub_navi_bg_mo.gif" />
+    <Content Include="admin\imgs\sub_navi_bg_n.gif" />
+    <Content Include="admin\includes\css\login.css" />
+    <Content Include="admin\includes\css\styles.css" />
+    <Content Include="admin\manage_admin.aspx" />
+    <Content Include="admin\manage_client.aspx" />
+    <Content Include="admin\manage_department.aspx" />
+    <Content Include="admin\manage_emp_grade.aspx" />
+    <Content Include="admin\reset_ password.aspx" />
+    <Content Include="admin\send_car.aspx" />
+    <Content Include="admin\update_password.aspx" />
+    <Content Include="admin\user_accs_permissions.aspx" />
+    <Content Include="admin\view_cars.aspx" />
+    <Content Include="admin\view_car_details.aspx" />
+    <Content Include="admin\view_completed_projects.aspx" />
+    <Content Include="admin\view_completed_tasks.aspx" />
+    <Content Include="admin\view_completed_tasks1.aspx" />
+    <Content Include="admin\view_completed_task_details.aspx" />
+    <Content Include="admin\view_daily_report.aspx" />
+    <Content Include="admin\view_daily_report_details.aspx" />
+    <Content Include="admin\view_expences_status.aspx" />
+    <Content Include="admin\view_expences_status_details.aspx" />
+    <Content Include="admin\view_images.aspx" />
+    <Content Include="admin\view_pending_projects.aspx" />
+    <Content Include="admin\view_pending_tasks.aspx" />
+    <Content Include="admin\view_pending_task_details.aspx" />
+    <Content Include="admin\view_project_status_details.aspx" />
+    <Content Include="admin\view_underprocess_project_status.aspx" />
+    <Content Include="admin\view_underprocess_task_details.aspx" />
+    <Content Include="admin\virew_underprocess_tasks.aspx" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
+    <Content Include="calnder.aspx" />
+    <Content Include="changepassword.aspx" />
+    <Content Include="clientdisplay.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="employees\car_reply.aspx" />
+    <Content Include="employees\create_daily_report.aspx" />
+    <Content Include="employees\create_task .aspx" />
+    <Content Include="employees\daily_report_expencess.aspx" />
+    <Content Include="employees\employeedefault.aspx" />
+    <Content Include="employees\goods_recepit_note.aspx" />
+    <Content Include="employees\imagefile\RPT0029p1.jpg" />
+    <Content Include="employees\imagefile\RPT0029p2.jpg" />
+    <Content Include="employees\imagefile\RPT0029p3.jpg" />
+    <Content Include="employees\imagefile\RPT0030p1.jpg" />
+    <Content Include="employees\imagefile\RPT0030p2.jpg" />
+    <Content Include="employees\imagefile\RPT0030p3.jpg" />
+    <Content Include="employees\imagefile\RPT0030p4.jpg" />
+    <Content Include="employees\imagefile\RPT0030p5.jpg" />
+    <Content Include="employees\imagefile\RPT0031p1bg_header.jpg" />
+    <Content Include="employees\imagefile\RPT0031p2icon_calendar.jpg" />
+    <Content Include="employees\imagefile\RPT0031p3main_navi_bg.gif" />
+    <Content Include="employees\imagefile\RPT0031p494567205_pQFouAqN.jpg" />
+    <Content Include="employees\imagefile\RPT0031p5sub_navi_bg_mo.gif" />
+    <Content Include="employees\imgs\bg_form_head.jpg" />
+    <Content Include="employees\imgs\bg_header.jpg" />
+    <Content Include="employees\imgs\form_head_left.jpg" />
+    <Content Include="employees\imgs\form_head_right.jpg" />
+    <Content Include="employees\imgs\icon_calendar.jpg" />
+    <Content Include="employees\imgs\logo.jpg" />
+    <Content Include="employees\imgs\main_navi_bg.gif" />
+    <Content Include="employees\imgs\sub_navi_bg_mo.gif" />
+    <Content Include="employees\imgs\sub_navi_bg_n.gif" />
+    <Content Include="employees\includes\css\login.css" />
+    <Content Include="employees\includes\css\styles.css" />
+    <Content Include="employees\pretty_expencess.aspx" />
+    <Content Include="employees\projects_levels_status.aspx" />
+    <Content Include="employees\project_status.aspx" />
+    <Content Include="employees\purchase_requisition.aspx" />
+    <Content Include="employees\send_car.aspx" />
+    <Content Include="employees\task_details.aspx" />
+    <Content Include="employees\view purchase_requisition.aspx" />
+    <Content Include="employees\view_cars.aspx" />
+    <Content Include="employees\view_car_details.aspx" />
+    <Content Include="employees\view_car_reply.aspx" />
+    <Content Include="employees\view_daily_report.aspx" />
+    <Content Include="employees\view_daily_report_details.aspx" />
+    <Content Include="employees\view_expences.aspx" />
+    <Content Include="employees\view_expences_status.aspx" />
+    <Content Include="employees\view_expences_status_details.aspx" />
+    <Content Include="employees\view_images.aspx" />
+    <Content Include="employees\view_orders.aspx" />
+    <Content Include="employees\view_prettyexpences_details.aspx" />
+    <Content Include="employees\view_project_status.aspx" />
+    <Content Include="employees\view_project_status_details.aspx" />
+    <Content Include="employees\view_purchase_requisition_details.aspx" />
+    <Content Include="employees\view_task.aspx" />
+    <Content Include="employees\view_task_status.aspx" />
+    <Content Include="employees\view_task_status_details.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="hr\create_employee .aspx" />
+    <Content Include="hr\edit_employee.aspx" />
+    <Content Include="hr\hrdefault.aspx" />
+    <Content Include="hr\imgs\bg_form_head.jpg" />
+    <Content Include="hr\imgs\bg_header.jpg" />
+    <Content Include="hr\imgs\form_head_left.jpg" />
+    <Content Include="hr\imgs\form_head_right.jpg" />
+    <Content Include="hr\imgs\icon_calendar.jpg" />
+    <Content Include="hr\imgs\logo.jpg" />
+    <Content Include="hr\imgs\main_navi_bg.gif" />
+    <Content Include="hr\imgs\sub_navi_bg_mo.gif" />
+    <Content Include="hr\imgs\sub_navi_bg_n.gif" />
+    <Content Include="hr\includes\css\login.css" />
+    <Content Include="hr\includes\css\styles.css" />
+    <Content Include="hr\manage _employee.aspx" />
+    <Content Include="hr\reset_ password.aspx" />
+    <Content Include="hr\update_password.aspx" />
+    <Content Include="hr\user_access_permissions_hr.aspx" />
+    <Content Include="imgs\bg_form_head.jpg" />
+    <Content Include="imgs\bg_header.jpg" />
+    <Content Include="imgs\form_head_left.jpg" />
+    <Content Include="imgs\form_head_right.jpg" />
+    <Content Include="imgs\icon_calendar.jpg" />
+    <Content Include="imgs\logo.jpg" />
+    <Content Include="imgs\main_navi_bg.gif" />
+    <Content Include="imgs\sub_navi_bg_mo.gif" />
+    <Content Include="imgs\sub_navi_bg_n.gif" />
+    <Content Include="includes\css\login.css" />
+    <Content Include="includes\css\styles.css" />
+    <Content Include="noprivilise.aspx" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\csc.exe" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\csi.exe" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\Microsoft.Build.Tasks.CodeAnalysis.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\Microsoft.CodeAnalysis.CSharp.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\Microsoft.CodeAnalysis.CSharp.Scripting.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\Microsoft.CodeAnalysis.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\Microsoft.CodeAnalysis.Scripting.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\Microsoft.CodeAnalysis.VisualBasic.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\Microsoft.DiaSymReader.Native.amd64.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\Microsoft.DiaSymReader.Native.x86.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\System.AppContext.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\System.Collections.Immutable.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\System.Diagnostics.StackTrace.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\System.IO.FileSystem.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\System.IO.FileSystem.Primitives.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\System.Reflection.Metadata.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\vbc.exe" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\VBCSCompiler.exe" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\csc.exe" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\csi.exe" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\Microsoft.Build.Tasks.CodeAnalysis.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\Microsoft.CodeAnalysis.CSharp.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\Microsoft.CodeAnalysis.CSharp.Scripting.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\Microsoft.CodeAnalysis.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\Microsoft.CodeAnalysis.Scripting.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\Microsoft.CodeAnalysis.VisualBasic.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\Microsoft.DiaSymReader.Native.amd64.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\Microsoft.DiaSymReader.Native.x86.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\Microsoft.Win32.Primitives.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.AppContext.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Collections.Immutable.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Console.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Diagnostics.DiagnosticSource.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Diagnostics.FileVersionInfo.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Diagnostics.StackTrace.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Globalization.Calendars.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.IO.Compression.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.IO.Compression.ZipFile.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.IO.FileSystem.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.IO.FileSystem.Primitives.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Net.Http.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Net.Sockets.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Reflection.Metadata.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Runtime.InteropServices.RuntimeInformation.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Security.Cryptography.Algorithms.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Security.Cryptography.Encoding.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Security.Cryptography.Primitives.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Security.Cryptography.X509Certificates.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Text.Encoding.CodePages.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Threading.Tasks.Extensions.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.ValueTuple.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Xml.ReaderWriter.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Xml.XmlDocument.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Xml.XPath.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Xml.XPath.XDocument.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\vbc.exe" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\VBCSCompiler.exe" />
+    <Content Include="projects\add_project.aspx" />
+    <Content Include="projects\add_project_levels.aspx" />
+    <Content Include="projects\add_project_type.aspx" />
+    <Content Include="projects\add_sub_project.aspx" />
+    <Content Include="projects\assign_project_to_employee.aspx" />
+    <Content Include="projects\edit_project.aspx" />
+    <Content Include="projects\edit_project_levels.aspx" />
+    <Content Include="projects\edit_project_type.aspx" />
+    <Content Include="projects\edit_sub_project.aspx" />
+    <Content Include="projects\imgs\bg_form_head.jpg" />
+    <Content Include="projects\imgs\bg_header.jpg" />
+    <Content Include="projects\imgs\form_head_left.jpg" />
+    <Content Include="projects\imgs\form_head_right.jpg" />
+    <Content Include="projects\imgs\icon_calendar.jpg" />
+    <Content Include="projects\imgs\logo.jpg" />
+    <Content Include="projects\imgs\main_navi_bg.gif" />
+    <Content Include="projects\imgs\sub_navi_bg_mo.gif" />
+    <Content Include="projects\imgs\sub_navi_bg_n.gif" />
+    <Content Include="projects\includes\css\login.css" />
+    <Content Include="projects\includes\css\styles.css" />
+    <Content Include="projects\manage_project.aspx" />
+    <Content Include="projects\manage_project_levels.aspx" />
+    <Content Include="projects\manage_project_type.aspx" />
+    <Content Include="projects\manage_sub_project.aspx" />
+    <Content Include="projects\projectdefault.aspx" />
+    <Content Include="projects\user_relations.aspx" />
+    <Content Include="projects\view_pending_orders.aspx" />
+    <Content Include="projects\view_pending_order_details.aspx" />
+    <Content Include="projects\view_purchase_requisition.aspx" />
+    <Content Include="projects\view_purchase_requisition_details.aspx" />
+    <Content Include="projects\view_rejected_orders.aspx" />
+    <Content Include="projects\view_rejected_order_details.aspx" />
+    <Content Include="purchase\add_material.aspx" />
+    <Content Include="purchase\add_material_cat.aspx" />
+    <Content Include="purchase\edit_materials.aspx" />
+    <Content Include="purchase\edit_material_cat.aspx" />
+    <Content Include="purchase\imgs\bg_form_head.jpg" />
+    <Content Include="purchase\imgs\bg_header.jpg" />
+    <Content Include="purchase\imgs\form_head_left.jpg" />
+    <Content Include="purchase\imgs\form_head_right.jpg" />
+    <Content Include="purchase\imgs\icon_calendar.jpg" />
+    <Content Include="purchase\imgs\logo.jpg" />
+    <Content Include="purchase\imgs\main_navi_bg.gif" />
+    <Content Include="purchase\imgs\Masterpages\add_department.aspx" />
+    <Content Include="purchase\imgs\Masterpages\add_emp_grade.aspx" />
+    <Content Include="purchase\imgs\Masterpages\add_material.aspx" />
+    <Content Include="purchase\imgs\Masterpages\add_material_cat.aspx" />
+    <Content Include="purchase\imgs\Masterpages\add_project.aspx" />
+    <Content Include="purchase\imgs\Masterpages\add_project_levels.aspx" />
+    <Content Include="purchase\imgs\Masterpages\add_project_type.aspx" />
+    <Content Include="purchase\imgs\Masterpages\add_sub_project.aspx" />
+    <Content Include="purchase\imgs\Masterpages\edit_department.aspx" />
+    <Content Include="purchase\imgs\Masterpages\edit_emp_grade.aspx" />
+    <Content Include="purchase\imgs\Masterpages\edit_materials.aspx" />
+    <Content Include="purchase\imgs\Masterpages\edit_material_cat.aspx" />
+    <Content Include="purchase\imgs\Masterpages\edit_project.aspx" />
+    <Content Include="purchase\imgs\Masterpages\edit_project_levels.aspx" />
+    <Content Include="purchase\imgs\Masterpages\edit_project_type.aspx" />
+    <Content Include="purchase\imgs\Masterpages\edit_sub_project.aspx" />
+    <Content Include="purchase\imgs\Masterpages\imgs\bg_form_head.jpg" />
+    <Content Include="purchase\imgs\Masterpages\imgs\bg_header.jpg" />
+    <Content Include="purchase\imgs\Masterpages\imgs\form_head_left.jpg" />
+    <Content Include="purchase\imgs\Masterpages\imgs\form_head_right.jpg" />
+    <Content Include="purchase\imgs\Masterpages\imgs\icon_calendar.jpg" />
+    <Content Include="purchase\imgs\Masterpages\imgs\logo.jpg" />
+    <Content Include="purchase\imgs\Masterpages\imgs\main_navi_bg.gif" />
+    <Content Include="purchase\imgs\Masterpages\imgs\sub_navi_bg_mo.gif" />
+    <Content Include="purchase\imgs\Masterpages\imgs\sub_navi_bg_n.gif" />
+    <Content Include="purchase\imgs\Masterpages\includes\css\styles.css" />
+    <Content Include="purchase\imgs\Masterpages\manage_department.aspx" />
+    <Content Include="purchase\imgs\Masterpages\manage_emp_grade.aspx" />
+    <Content Include="purchase\imgs\Masterpages\manage_materials.aspx" />
+    <Content Include="purchase\imgs\Masterpages\manage_material_cat.aspx" />
+    <Content Include="purchase\imgs\Masterpages\manage_project.aspx" />
+    <Content Include="purchase\imgs\Masterpages\manage_project_levels.aspx" />
+    <Content Include="purchase\imgs\Masterpages\manage_project_type.aspx" />
+    <Content Include="purchase\imgs\Masterpages\manage_sub_project.aspx" />
+    <Content Include="purchase\imgs\sub_navi_bg_mo.gif" />
+    <Content Include="purchase\imgs\sub_navi_bg_n.gif" />
+    <Content Include="purchase\includes\css\login.css" />
+    <Content Include="purchase\includes\css\styles.css" />
+    <Content Include="purchase\manage_materials.aspx" />
+    <Content Include="purchase\manage_material_cat.aspx" />
+    <Content Include="purchase\purchasedefault.aspx" />
+    <Content Include="purchase\purchase_order.aspx" />
+    <Content Include="purchase\view_accepted_orders.aspx" />
+    <Content Include="purchase\view_completed_orders.aspx" />
+    <Content Include="purchase\view_completed_order_details.aspx" />
+    <Content Include="purchase\view_expences_status.aspx" />
+    <Content Include="purchase\view_expences_status_details.aspx" />
+    <Content Include="purchase\view_pending_orders.aspx" />
+    <Content Include="purchase\view_pending_orders_details.aspx" />
+    <Content Include="purchase\view_purchase_order_details.aspx" />
+    <Content Include="purchase\view_purchase_requisition.aspx" />
+    <Content Include="purchase\view_purchase_requisition_details.aspx" />
+    <Content Include="purchase\view_rejected_orders.aspx" />
+    <Content Include="purchase\view_rejected_order_details.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="accounts\accountsdefault.aspx.cs">
+      <DependentUpon>accountsdefault.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="accounts\accountsdefault.aspx.designer.cs">
+      <DependentUpon>accountsdefault.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="accounts\view_accounts.aspx.cs">
+      <DependentUpon>view_accounts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="accounts\view_accounts.aspx.designer.cs">
+      <DependentUpon>view_accounts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="accounts\view_account_details.aspx.cs">
+      <DependentUpon>view_account_details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="accounts\view_account_details.aspx.designer.cs">
+      <DependentUpon>view_account_details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="accounts\view_expences_status.aspx.cs">
+      <DependentUpon>view_expences_status.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="accounts\view_expences_status.aspx.designer.cs">
+      <DependentUpon>view_expences_status.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="accounts\view_expences_status_details.aspx.cs">
+      <DependentUpon>view_expences_status_details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="accounts\view_expences_status_details.aspx.designer.cs">
+      <DependentUpon>view_expences_status_details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="accounts\view_purchase_orders.aspx.cs">
+      <DependentUpon>view_purchase_orders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="accounts\view_purchase_orders.aspx.designer.cs">
+      <DependentUpon>view_purchase_orders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="accounts\view_purchase_order_details.aspx.cs">
+      <DependentUpon>view_purchase_order_details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="accounts\view_purchase_order_details.aspx.designer.cs">
+      <DependentUpon>view_purchase_order_details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admindefault.aspx.cs">
+      <DependentUpon>admindefault.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admindefault.aspx.designer.cs">
+      <DependentUpon>admindefault.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminHeader.ascx.cs">
+      <DependentUpon>AdminHeader.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminHeader.ascx.designer.cs">
+      <DependentUpon>AdminHeader.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\add_admin.aspx.cs">
+      <DependentUpon>add_admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\add_admin.aspx.designer.cs">
+      <DependentUpon>add_admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\add_client.aspx.cs">
+      <DependentUpon>add_client.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\add_client.aspx.designer.cs">
+      <DependentUpon>add_client.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\add_department.aspx.cs">
+      <DependentUpon>add_department.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\add_department.aspx.designer.cs">
+      <DependentUpon>add_department.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\add_emp_grade.aspx.cs">
+      <DependentUpon>add_emp_grade.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\add_emp_grade.aspx.designer.cs">
+      <DependentUpon>add_emp_grade.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\admindefault.aspx.cs">
+      <DependentUpon>admindefault.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\assign_modules_to_admin.aspx.cs">
+      <DependentUpon>assign_modules_to_admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\assign_modules_to_admin.aspx.designer.cs">
+      <DependentUpon>assign_modules_to_admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\edit_admin.aspx.cs">
+      <DependentUpon>edit_admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\edit_admin.aspx.designer.cs">
+      <DependentUpon>edit_admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\edit_client.aspx.cs">
+      <DependentUpon>edit_client.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\edit_client.aspx.designer.cs">
+      <DependentUpon>edit_client.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\edit_department.aspx.cs">
+      <DependentUpon>edit_department.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\edit_department.aspx.designer.cs">
+      <DependentUpon>edit_department.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\edit_emp_grade.aspx.cs">
+      <DependentUpon>edit_emp_grade.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\edit_emp_grade.aspx.designer.cs">
+      <DependentUpon>edit_emp_grade.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\image.aspx.cs">
+      <DependentUpon>image.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\image.aspx.designer.cs">
+      <DependentUpon>image.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\manage_admin.aspx.cs">
+      <DependentUpon>manage_admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\manage_admin.aspx.designer.cs">
+      <DependentUpon>manage_admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\manage_client.aspx.cs">
+      <DependentUpon>manage_client.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\manage_client.aspx.designer.cs">
+      <DependentUpon>manage_client.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\manage_department.aspx.cs">
+      <DependentUpon>manage_department.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\manage_department.aspx.designer.cs">
+      <DependentUpon>manage_department.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\manage_emp_grade.aspx.cs">
+      <DependentUpon>manage_emp_grade.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\manage_emp_grade.aspx.designer.cs">
+      <DependentUpon>manage_emp_grade.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\reset_ password.aspx.cs">
+      <DependentUpon>reset_ password.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\reset_ password.aspx.designer.cs">
+      <DependentUpon>reset_ password.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\send_car.aspx.cs">
+      <DependentUpon>send_car.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\send_car.aspx.designer.cs">
+      <DependentUpon>send_car.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\update_password.aspx.cs">
+      <DependentUpon>update_password.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\update_password.aspx.designer.cs">
+      <DependentUpon>update_password.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\user_accs_permissions.aspx.cs">
+      <DependentUpon>user_accs_permissions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\user_accs_permissions.aspx.designer.cs">
+      <DependentUpon>user_accs_permissions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\view_cars.aspx.cs">
+      <DependentUpon>view_cars.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\view_cars.aspx.designer.cs">
+      <DependentUpon>view_cars.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\view_car_details.aspx.cs">
+      <DependentUpon>view_car_details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\view_car_details.aspx.designer.cs">
+      <DependentUpon>view_car_details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\view_completed_projects.aspx.cs">
+      <DependentUpon>view_completed_projects.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\view_completed_projects.aspx.designer.cs">
+      <DependentUpon>view_completed_projects.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\view_completed_tasks.aspx.cs">
+      <DependentUpon>view_completed_tasks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\view_completed_tasks.aspx.designer.cs">
+      <DependentUpon>view_completed_tasks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\view_completed_tasks1.aspx.cs">
+      <DependentUpon>view_completed_tasks1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\view_completed_tasks1.aspx.designer.cs">
+      <DependentUpon>view_completed_tasks1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\view_completed_task_details.aspx.cs">
+      <DependentUpon>view_completed_task_details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\view_completed_task_details.aspx.designer.cs">
+      <DependentUpon>view_completed_task_details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\view_daily_report.aspx.cs">
+      <DependentUpon>view_daily_report.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\view_daily_report.aspx.designer.cs">
+      <DependentUpon>view_daily_report.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\view_daily_report_details.aspx.cs">
+      <DependentUpon>view_daily_report_details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\view_daily_report_details.aspx.designer.cs">
+      <DependentUpon>view_daily_report_details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\view_expences_status.aspx.cs">
+      <DependentUpon>view_expences_status.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\view_expences_status.aspx.designer.cs">
+      <DependentUpon>view_expences_status.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\view_expences_status_details.aspx.cs">
+      <DependentUpon>view_expences_status_details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\view_expences_status_details.aspx.designer.cs">
+      <DependentUpon>view_expences_status_details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\view_images.aspx.cs">
+      <DependentUpon>view_images.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\view_images.aspx.designer.cs">
+      <DependentUpon>view_images.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\view_pending_projects.aspx.cs">
+      <DependentUpon>view_pending_projects.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\view_pending_projects.aspx.designer.cs">
+      <DependentUpon>view_pending_projects.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\view_pending_tasks.aspx.cs">
+      <DependentUpon>view_pending_tasks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\view_pending_tasks.aspx.designer.cs">
+      <DependentUpon>view_pending_tasks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\view_pending_task_details.aspx.cs">
+      <DependentUpon>view_pending_task_details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\view_pending_task_details.aspx.designer.cs">
+      <DependentUpon>view_pending_task_details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\view_project_status_details.aspx.cs">
+      <DependentUpon>view_project_status_details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\view_project_status_details.aspx.designer.cs">
+      <DependentUpon>view_project_status_details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\view_underprocess_project_status.aspx.cs">
+      <DependentUpon>view_underprocess_project_status.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\view_underprocess_project_status.aspx.designer.cs">
+      <DependentUpon>view_underprocess_project_status.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\view_underprocess_task_details.aspx.cs">
+      <DependentUpon>view_underprocess_task_details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\view_underprocess_task_details.aspx.designer.cs">
+      <DependentUpon>view_underprocess_task_details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\virew_underprocess_tasks.aspx.cs">
+      <DependentUpon>virew_underprocess_tasks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\virew_underprocess_tasks.aspx.designer.cs">
+      <DependentUpon>virew_underprocess_tasks.aspx</DependentUpon>
+    </Compile>
+    <Content Include="App_Code\functions.cs" />
+    <Compile Include="calnder.aspx.designer.cs">
+      <DependentUpon>calnder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="changepassword.aspx.designer.cs">
+      <DependentUpon>changepassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="clientdisplay.aspx.designer.cs">
+      <DependentUpon>clientdisplay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="employees\car_reply.aspx.designer.cs">
+      <DependentUpon>car_reply.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="employees\create_daily_report.aspx.designer.cs">
+      <DependentUpon>create_daily_report.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="employees\create_task .aspx.designer.cs">
+      <DependentUpon>create_task .aspx</DependentUpon>
+    </Compile>
+    <Compile Include="employees\daily_report_expencess.aspx.designer.cs">
+      <DependentUpon>daily_report_expencess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="employees\employeedefault.aspx.designer.cs">
+      <DependentUpon>employeedefault.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="employees\goods_recepit_note.aspx.designer.cs">
+      <DependentUpon>goods_recepit_note.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="employees\pretty_expencess.aspx.designer.cs">
+      <DependentUpon>pretty_expencess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="employees\projects_levels_status.aspx.designer.cs">
+      <DependentUpon>projects_levels_status.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="employees\project_status.aspx.designer.cs">
+      <DependentUpon>project_status.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="employees\purchase_requisition.aspx.designer.cs">
+      <DependentUpon>purchase_requisition.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="employees\send_car.aspx.designer.cs">
+      <DependentUpon>send_car.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="employees\task_details.aspx.designer.cs">
+      <DependentUpon>task_details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="employees\view purchase_requisition.aspx.designer.cs">
+      <DependentUpon>view purchase_requisition.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="employees\view_cars.aspx.designer.cs">
+      <DependentUpon>view_cars.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="employees\view_car_details.aspx.designer.cs">
+      <DependentUpon>view_car_details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="employees\view_car_reply.aspx.designer.cs">
+      <DependentUpon>view_car_reply.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="employees\view_daily_report.aspx.designer.cs">
+      <DependentUpon>view_daily_report.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="employees\view_daily_report_details.aspx.designer.cs">
+      <DependentUpon>view_daily_report_details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="employees\view_expences.aspx.designer.cs">
+      <DependentUpon>view_expences.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="employees\view_expences_status.aspx.designer.cs">
+      <DependentUpon>view_expences_status.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="employees\view_expences_status_details.aspx.designer.cs">
+      <DependentUpon>view_expences_status_details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="employees\view_images.aspx.designer.cs">
+      <DependentUpon>view_images.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="employees\view_orders.aspx.designer.cs">
+      <DependentUpon>view_orders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="employees\view_prettyexpences_details.aspx.designer.cs">
+      <DependentUpon>view_prettyexpences_details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="employees\view_project_status.aspx.designer.cs">
+      <DependentUpon>view_project_status.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="employees\view_project_status_details.aspx.designer.cs">
+      <DependentUpon>view_project_status_details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="employees\view_purchase_requisition_details.aspx.designer.cs">
+      <DependentUpon>view_purchase_requisition_details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="employees\view_task.aspx.designer.cs">
+      <DependentUpon>view_task.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="employees\view_task_status.aspx.designer.cs">
+      <DependentUpon>view_task_status.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="employees\view_task_status_details.aspx.designer.cs">
+      <DependentUpon>view_task_status_details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="hr\create_employee .aspx.designer.cs">
+      <DependentUpon>create_employee .aspx</DependentUpon>
+    </Compile>
+    <Compile Include="hr\edit_employee.aspx.designer.cs">
+      <DependentUpon>edit_employee.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="hr\hrdefault.aspx.designer.cs">
+      <DependentUpon>hrdefault.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="hr\manage _employee.aspx.designer.cs">
+      <DependentUpon>manage _employee.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="hr\reset_ password.aspx.designer.cs">
+      <DependentUpon>reset_ password.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="hr\update_password.aspx.designer.cs">
+      <DependentUpon>update_password.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="hr\user_access_permissions_hr.aspx.designer.cs">
+      <DependentUpon>user_access_permissions_hr.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="noprivilise.aspx.designer.cs">
+      <DependentUpon>noprivilise.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="calnder.aspx.cs">
+      <DependentUpon>calnder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="changepassword.aspx.cs">
+      <DependentUpon>changepassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clientdisplay.aspx.cs">
+      <DependentUpon>clientdisplay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="employees\car_reply.aspx.cs">
+      <DependentUpon>car_reply.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="employees\create_daily_report.aspx.cs">
+      <DependentUpon>create_daily_report.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="employees\create_task .aspx.cs">
+      <DependentUpon>create_task .aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="employees\daily_report_expencess.aspx.cs">
+      <DependentUpon>daily_report_expencess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="employees\employeedefault.aspx.cs">
+      <DependentUpon>employeedefault.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="employees\goods_recepit_note.aspx.cs">
+      <DependentUpon>goods_recepit_note.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="employees\pretty_expencess.aspx.cs">
+      <DependentUpon>pretty_expencess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="employees\projects_levels_status.aspx.cs">
+      <DependentUpon>projects_levels_status.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="employees\project_status.aspx.cs">
+      <DependentUpon>project_status.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="employees\purchase_requisition.aspx.cs">
+      <DependentUpon>purchase_requisition.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="employees\send_car.aspx.cs">
+      <DependentUpon>send_car.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="employees\task_details.aspx.cs">
+      <DependentUpon>task_details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="employees\view purchase_requisition.aspx.cs">
+      <DependentUpon>view purchase_requisition.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="employees\view_cars.aspx.cs">
+      <DependentUpon>view_cars.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="employees\view_car_details.aspx.cs">
+      <DependentUpon>view_car_details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="employees\view_car_reply.aspx.cs">
+      <DependentUpon>view_car_reply.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="employees\view_daily_report.aspx.cs">
+      <DependentUpon>view_daily_report.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="employees\view_daily_report_details.aspx.cs">
+      <DependentUpon>view_daily_report_details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="employees\view_expences.aspx.cs">
+      <DependentUpon>view_expences.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="employees\view_expences_status.aspx.cs">
+      <DependentUpon>view_expences_status.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="employees\view_expences_status_details.aspx.cs">
+      <DependentUpon>view_expences_status_details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="employees\view_images.aspx.cs">
+      <DependentUpon>view_images.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="employees\view_orders.aspx.cs">
+      <DependentUpon>view_orders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="employees\view_prettyexpences_details.aspx.cs">
+      <DependentUpon>view_prettyexpences_details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="employees\view_project_status.aspx.cs">
+      <DependentUpon>view_project_status.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="employees\view_project_status_details.aspx.cs">
+      <DependentUpon>view_project_status_details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="employees\view_purchase_requisition_details.aspx.cs">
+      <DependentUpon>view_purchase_requisition_details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="employees\view_task.aspx.cs">
+      <DependentUpon>view_task.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="employees\view_task_status.aspx.cs">
+      <DependentUpon>view_task_status.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="employees\view_task_status_details.aspx.cs">
+      <DependentUpon>view_task_status_details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="hr\create_employee .aspx.cs">
+      <DependentUpon>create_employee .aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="hr\edit_employee.aspx.cs">
+      <DependentUpon>edit_employee.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="hr\hrdefault.aspx.cs">
+      <DependentUpon>hrdefault.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="hr\manage _employee.aspx.cs">
+      <DependentUpon>manage _employee.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="hr\reset_ password.aspx.cs">
+      <DependentUpon>reset_ password.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="hr\update_password.aspx.cs">
+      <DependentUpon>update_password.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="hr\user_access_permissions_hr.aspx.cs">
+      <DependentUpon>user_access_permissions_hr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="noprivilise.aspx.cs">
+      <DependentUpon>noprivilise.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
+    <Compile Include="Old_App_Code\functions.cs" />
+    <Compile Include="projects\add_project.aspx.cs">
+      <DependentUpon>add_project.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="projects\add_project.aspx.designer.cs">
+      <DependentUpon>add_project.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="projects\add_project_levels.aspx.cs">
+      <DependentUpon>add_project_levels.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="projects\add_project_levels.aspx.designer.cs">
+      <DependentUpon>add_project_levels.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="projects\add_project_type.aspx.cs">
+      <DependentUpon>add_project_type.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="projects\add_project_type.aspx.designer.cs">
+      <DependentUpon>add_project_type.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="projects\add_sub_project.aspx.cs">
+      <DependentUpon>add_sub_project.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="projects\add_sub_project.aspx.designer.cs">
+      <DependentUpon>add_sub_project.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="projects\assign_project_to_employee.aspx.cs">
+      <DependentUpon>assign_project_to_employee.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="projects\assign_project_to_employee.aspx.designer.cs">
+      <DependentUpon>assign_project_to_employee.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="projects\edit_project.aspx.cs">
+      <DependentUpon>edit_project.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="projects\edit_project.aspx.designer.cs">
+      <DependentUpon>edit_project.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="projects\edit_project_levels.aspx.cs">
+      <DependentUpon>edit_project_levels.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="projects\edit_project_levels.aspx.designer.cs">
+      <DependentUpon>edit_project_levels.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="projects\edit_project_type.aspx.cs">
+      <DependentUpon>edit_project_type.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="projects\edit_project_type.aspx.designer.cs">
+      <DependentUpon>edit_project_type.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="projects\edit_sub_project.aspx.cs">
+      <DependentUpon>edit_sub_project.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="projects\edit_sub_project.aspx.designer.cs">
+      <DependentUpon>edit_sub_project.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="projects\manage_project.aspx.cs">
+      <DependentUpon>manage_project.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="projects\manage_project.aspx.designer.cs">
+      <DependentUpon>manage_project.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="projects\manage_project_levels.aspx.cs">
+      <DependentUpon>manage_project_levels.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="projects\manage_project_levels.aspx.designer.cs">
+      <DependentUpon>manage_project_levels.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="projects\manage_project_type.aspx.cs">
+      <DependentUpon>manage_project_type.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="projects\manage_project_type.aspx.designer.cs">
+      <DependentUpon>manage_project_type.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="projects\manage_sub_project.aspx.cs">
+      <DependentUpon>manage_sub_project.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="projects\manage_sub_project.aspx.designer.cs">
+      <DependentUpon>manage_sub_project.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="projects\projectdefault.aspx.cs">
+      <DependentUpon>projectdefault.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="projects\projectdefault.aspx.designer.cs">
+      <DependentUpon>projectdefault.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="projects\user_relations.aspx.cs">
+      <DependentUpon>user_relations.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="projects\user_relations.aspx.designer.cs">
+      <DependentUpon>user_relations.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="projects\view_pending_orders.aspx.cs">
+      <DependentUpon>view_pending_orders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="projects\view_pending_orders.aspx.designer.cs">
+      <DependentUpon>view_pending_orders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="projects\view_pending_order_details.aspx.cs">
+      <DependentUpon>view_pending_order_details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="projects\view_pending_order_details.aspx.designer.cs">
+      <DependentUpon>view_pending_order_details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="projects\view_purchase_requisition.aspx.cs">
+      <DependentUpon>view_purchase_requisition.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="projects\view_purchase_requisition.aspx.designer.cs">
+      <DependentUpon>view_purchase_requisition.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="projects\view_purchase_requisition_details.aspx.cs">
+      <DependentUpon>view_purchase_requisition_details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="projects\view_purchase_requisition_details.aspx.designer.cs">
+      <DependentUpon>view_purchase_requisition_details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="projects\view_rejected_orders.aspx.cs">
+      <DependentUpon>view_rejected_orders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="projects\view_rejected_orders.aspx.designer.cs">
+      <DependentUpon>view_rejected_orders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="projects\view_rejected_order_details.aspx.cs">
+      <DependentUpon>view_rejected_order_details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="projects\view_rejected_order_details.aspx.designer.cs">
+      <DependentUpon>view_rejected_order_details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="purchase\add_material.aspx.cs">
+      <DependentUpon>add_material.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="purchase\add_material.aspx.designer.cs">
+      <DependentUpon>add_material.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="purchase\add_material_cat.aspx.cs">
+      <DependentUpon>add_material_cat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="purchase\add_material_cat.aspx.designer.cs">
+      <DependentUpon>add_material_cat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="purchase\edit_materials.aspx.cs">
+      <DependentUpon>edit_materials.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="purchase\edit_materials.aspx.designer.cs">
+      <DependentUpon>edit_materials.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="purchase\edit_material_cat.aspx.cs">
+      <DependentUpon>edit_material_cat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="purchase\edit_material_cat.aspx.designer.cs">
+      <DependentUpon>edit_material_cat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="purchase\imgs\Masterpages\add_department.aspx.cs">
+      <DependentUpon>add_department.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="purchase\imgs\Masterpages\add_department.aspx.designer.cs">
+      <DependentUpon>add_department.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="purchase\imgs\Masterpages\add_emp_grade.aspx.cs">
+      <DependentUpon>add_emp_grade.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="purchase\imgs\Masterpages\add_emp_grade.aspx.designer.cs">
+      <DependentUpon>add_emp_grade.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="purchase\imgs\Masterpages\add_material.aspx.cs">
+      <DependentUpon>add_material.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="purchase\imgs\Masterpages\add_material.aspx.designer.cs">
+      <DependentUpon>add_material.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="purchase\imgs\Masterpages\add_material_cat.aspx.cs">
+      <DependentUpon>add_material_cat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="purchase\imgs\Masterpages\add_material_cat.aspx.designer.cs">
+      <DependentUpon>add_material_cat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="purchase\imgs\Masterpages\add_project.aspx.cs">
+      <DependentUpon>add_project.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="purchase\imgs\Masterpages\add_project.aspx.designer.cs">
+      <DependentUpon>add_project.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="purchase\imgs\Masterpages\add_project_levels.aspx.cs">
+      <DependentUpon>add_project_levels.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="purchase\imgs\Masterpages\add_project_levels.aspx.designer.cs">
+      <DependentUpon>add_project_levels.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="purchase\imgs\Masterpages\add_project_type.aspx.cs">
+      <DependentUpon>add_project_type.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="purchase\imgs\Masterpages\add_project_type.aspx.designer.cs">
+      <DependentUpon>add_project_type.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="purchase\imgs\Masterpages\add_sub_project.aspx.cs">
+      <DependentUpon>add_sub_project.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="purchase\imgs\Masterpages\add_sub_project.aspx.designer.cs">
+      <DependentUpon>add_sub_project.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="purchase\imgs\Masterpages\edit_department.aspx.cs">
+      <DependentUpon>edit_department.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="purchase\imgs\Masterpages\edit_department.aspx.designer.cs">
+      <DependentUpon>edit_department.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="purchase\imgs\Masterpages\edit_emp_grade.aspx.cs">
+      <DependentUpon>edit_emp_grade.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="purchase\imgs\Masterpages\edit_emp_grade.aspx.designer.cs">
+      <DependentUpon>edit_emp_grade.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="purchase\imgs\Masterpages\edit_materials.aspx.cs">
+      <DependentUpon>edit_materials.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="purchase\imgs\Masterpages\edit_materials.aspx.designer.cs">
+      <DependentUpon>edit_materials.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="purchase\imgs\Masterpages\edit_material_cat.aspx.cs">
+      <DependentUpon>edit_material_cat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="purchase\imgs\Masterpages\edit_material_cat.aspx.designer.cs">
+      <DependentUpon>edit_material_cat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="purchase\imgs\Masterpages\edit_project.aspx.cs">
+      <DependentUpon>edit_project.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="purchase\imgs\Masterpages\edit_project.aspx.designer.cs">
+      <DependentUpon>edit_project.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="purchase\imgs\Masterpages\edit_project_levels.aspx.cs">
+      <DependentUpon>edit_project_levels.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="purchase\imgs\Masterpages\edit_project_levels.aspx.designer.cs">
+      <DependentUpon>edit_project_levels.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="purchase\imgs\Masterpages\edit_project_type.aspx.cs">
+      <DependentUpon>edit_project_type.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="purchase\imgs\Masterpages\edit_project_type.aspx.designer.cs">
+      <DependentUpon>edit_project_type.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="purchase\imgs\Masterpages\edit_sub_project.aspx.cs">
+      <DependentUpon>edit_sub_project.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="purchase\imgs\Masterpages\edit_sub_project.aspx.designer.cs">
+      <DependentUpon>edit_sub_project.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="purchase\imgs\Masterpages\manage_department.aspx.cs">
+      <DependentUpon>manage_department.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="purchase\imgs\Masterpages\manage_department.aspx.designer.cs">
+      <DependentUpon>manage_department.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="purchase\imgs\Masterpages\manage_emp_grade.aspx.cs">
+      <DependentUpon>manage_emp_grade.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="purchase\imgs\Masterpages\manage_emp_grade.aspx.designer.cs">
+      <DependentUpon>manage_emp_grade.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="purchase\imgs\Masterpages\manage_materials.aspx.cs">
+      <DependentUpon>manage_materials.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="purchase\imgs\Masterpages\manage_materials.aspx.designer.cs">
+      <DependentUpon>manage_materials.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="purchase\imgs\Masterpages\manage_material_cat.aspx.cs">
+      <DependentUpon>manage_material_cat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="purchase\imgs\Masterpages\manage_material_cat.aspx.designer.cs">
+      <DependentUpon>manage_material_cat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="purchase\imgs\Masterpages\manage_project.aspx.cs">
+      <DependentUpon>manage_project.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="purchase\imgs\Masterpages\manage_project.aspx.designer.cs">
+      <DependentUpon>manage_project.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="purchase\imgs\Masterpages\manage_project_levels.aspx.cs">
+      <DependentUpon>manage_project_levels.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="purchase\imgs\Masterpages\manage_project_levels.aspx.designer.cs">
+      <DependentUpon>manage_project_levels.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="purchase\imgs\Masterpages\manage_project_type.aspx.cs">
+      <DependentUpon>manage_project_type.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="purchase\imgs\Masterpages\manage_project_type.aspx.designer.cs">
+      <DependentUpon>manage_project_type.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="purchase\imgs\Masterpages\manage_sub_project.aspx.cs">
+      <DependentUpon>manage_sub_project.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="purchase\imgs\Masterpages\manage_sub_project.aspx.designer.cs">
+      <DependentUpon>manage_sub_project.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="purchase\manage_materials.aspx.cs">
+      <DependentUpon>manage_materials.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="purchase\manage_materials.aspx.designer.cs">
+      <DependentUpon>manage_materials.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="purchase\manage_material_cat.aspx.cs">
+      <DependentUpon>manage_material_cat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="purchase\manage_material_cat.aspx.designer.cs">
+      <DependentUpon>manage_material_cat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="purchase\purchasedefault.aspx.cs">
+      <DependentUpon>purchasedefault.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="purchase\purchasedefault.aspx.designer.cs">
+      <DependentUpon>purchasedefault.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="purchase\purchase_order.aspx.cs">
+      <DependentUpon>purchase_order.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="purchase\purchase_order.aspx.designer.cs">
+      <DependentUpon>purchase_order.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="purchase\view_accepted_orders.aspx.cs">
+      <DependentUpon>view_accepted_orders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="purchase\view_accepted_orders.aspx.designer.cs">
+      <DependentUpon>view_accepted_orders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="purchase\view_completed_orders.aspx.cs">
+      <DependentUpon>view_completed_orders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="purchase\view_completed_orders.aspx.designer.cs">
+      <DependentUpon>view_completed_orders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="purchase\view_completed_order_details.aspx.cs">
+      <DependentUpon>view_completed_order_details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="purchase\view_completed_order_details.aspx.designer.cs">
+      <DependentUpon>view_completed_order_details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="purchase\view_expences_status.aspx.cs">
+      <DependentUpon>view_expences_status.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="purchase\view_expences_status.aspx.designer.cs">
+      <DependentUpon>view_expences_status.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="purchase\view_expences_status_details.aspx.cs">
+      <DependentUpon>view_expences_status_details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="purchase\view_expences_status_details.aspx.designer.cs">
+      <DependentUpon>view_expences_status_details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="purchase\view_pending_orders.aspx.cs">
+      <DependentUpon>view_pending_orders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="purchase\view_pending_orders.aspx.designer.cs">
+      <DependentUpon>view_pending_orders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="purchase\view_pending_orders_details.aspx.cs">
+      <DependentUpon>view_pending_orders_details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="purchase\view_pending_orders_details.aspx.designer.cs">
+      <DependentUpon>view_pending_orders_details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="purchase\view_purchase_order_details.aspx.cs">
+      <DependentUpon>view_purchase_order_details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="purchase\view_purchase_order_details.aspx.designer.cs">
+      <DependentUpon>view_purchase_order_details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="purchase\view_purchase_requisition.aspx.cs">
+      <DependentUpon>view_purchase_requisition.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="purchase\view_purchase_requisition.aspx.designer.cs">
+      <DependentUpon>view_purchase_requisition.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="purchase\view_purchase_requisition_details.aspx.cs">
+      <DependentUpon>view_purchase_requisition_details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="purchase\view_purchase_requisition_details.aspx.designer.cs">
+      <DependentUpon>view_purchase_requisition_details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="purchase\view_rejected_orders.aspx.cs">
+      <DependentUpon>view_rejected_orders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="purchase\view_rejected_orders.aspx.designer.cs">
+      <DependentUpon>view_rejected_orders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="purchase\view_rejected_order_details.aspx.cs">
+      <DependentUpon>view_rejected_order_details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="purchase\view_rejected_order_details.aspx.designer.cs">
+      <DependentUpon>view_rejected_order_details.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="accounts\imgs\Thumbs.db" />
+    <Content Include="admin\imgs\Thumbs.db" />
+    <Content Include="employees\imgs\Thumbs.db" />
+    <Content Include="hr\imgs\Thumbs.db" />
+    <Content Include="obj\Debug\CMS.csprojAssemblyReference.cache" />
+    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="packages.config" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\.signature.p7s" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.Extensions.props" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.Extensions.props" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\content\net45\app.config.install.xdt" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\content\net45\app.config.uninstall.xdt" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\content\net45\web.config.install.xdt" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\content\net45\web.config.uninstall.xdt" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\content\net46\app.config.install.xdt" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\content\net46\app.config.uninstall.xdt" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\content\net46\web.config.install.xdt" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\content\net46\web.config.uninstall.xdt" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1.nupkg" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\net45\install.ps1" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\net45\uninstall.ps1" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\csc.exe.config" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\csc.rsp" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\csi.rsp" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\Microsoft.CSharp.Core.targets" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\Microsoft.VisualBasic.Core.targets" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\vbc.exe.config" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\vbc.rsp" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\VBCSCompiler.exe.config" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\csc.exe.config" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\csc.rsp" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\csi.exe.config" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\csi.rsp" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\Microsoft.CSharp.Core.targets" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\Microsoft.Managed.Core.targets" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\Microsoft.VisualBasic.Core.targets" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\vbc.exe.config" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\vbc.rsp" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\VBCSCompiler.exe.config" />
+    <Content Include="projects\imgs\Thumbs.db" />
+    <Content Include="purchase\imgs\Masterpages\imgs\Thumbs.db" />
+    <Content Include="purchase\imgs\Thumbs.db" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="obj\Debug\TempPE\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50179</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44332/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
