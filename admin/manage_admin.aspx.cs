@@ -73,11 +73,9 @@ namespace CMS.admin
             try
             {
                 lblerr_msg.Text = "";
-
-
                 cn = new SqlConnection(ConfigurationManager.AppSettings["CMS"]);
                 cn.Open();
-                da = new SqlDataAdapter("select user_id,emp_id from mdx_users where role_id='" + 4 + "'", cn);
+                da = new SqlDataAdapter("select user_id,emp_id from mdx_users where role_id='" + 4 + "' and user_id !='superadmin'", cn);
                 ds = new DataSet();
                 da.Fill(ds, "mdx_users");
                 if (ds.Tables["mdx_users"].Rows.Count == 0)

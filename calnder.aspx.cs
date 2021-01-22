@@ -21,7 +21,7 @@ namespace CMS
         {
             try
             {
-                string strscript = "<script>window.opener.document.forms(0)." + Request.QueryString["textbox"] + ".value = '";
+                string strscript = "<script>window.opener.document.forms[0]." + Request.QueryString["textbox"] + ".value = '";
                 strscript += Calendar1.SelectedDate.ToString("MM/dd/yyyy");
 
                 strscript += "';self.close()";

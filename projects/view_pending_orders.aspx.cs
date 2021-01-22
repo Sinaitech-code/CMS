@@ -73,7 +73,7 @@ namespace CMS.projects
 
                 cn = new SqlConnection(ConfigurationManager.AppSettings["CMS"]);
                 cn.Open();
-                da = new SqlDataAdapter("select requisition_id,user_id,requisition_gen_date,requisition_expected_date from mdx_purchase_requisition where top_user_status=1 and projadmin_status=2 ", cn);
+                da = new SqlDataAdapter("select requisition_id,user_id,requisition_gen_date,requisition_expected_date from mdx_purchase_requisition where top_user_status=1 and emp_status=2 ", cn);
                 ds = new DataSet();
                 da.Fill(ds, "mdx_purchase_requisition");
                 if (ds.Tables["mdx_purchase_requisition"].Rows.Count == 0)

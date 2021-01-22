@@ -135,8 +135,6 @@
     <Content Include="admin\view_underprocess_project_status.aspx" />
     <Content Include="admin\view_underprocess_task_details.aspx" />
     <Content Include="admin\virew_underprocess_tasks.aspx" />
-    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
-    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
     <Content Include="calnder.aspx" />
     <Content Include="changepassword.aspx" />
     <Content Include="clientdisplay.aspx" />
@@ -1002,7 +1000,6 @@
       <DependentUpon>noprivilise.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="Old_App_Code\functions.cs" />
     <Compile Include="projects\add_project.aspx.cs">
       <DependentUpon>add_project.aspx</DependentUpon>
@@ -1466,8 +1463,6 @@
     <Content Include="admin\imgs\Thumbs.db" />
     <Content Include="employees\imgs\Thumbs.db" />
     <Content Include="hr\imgs\Thumbs.db" />
-    <Content Include="obj\Debug\CMS.csprojAssemblyReference.cache" />
-    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <None Include="packages.config" />
     <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\.signature.p7s" />
     <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.Extensions.props" />
@@ -1506,6 +1501,7 @@
     <Content Include="projects\imgs\Thumbs.db" />
     <Content Include="purchase\imgs\Masterpages\imgs\Thumbs.db" />
     <Content Include="purchase\imgs\Thumbs.db" />
+    <None Include="Properties\PublishProfiles\sinaitechcms - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -1513,9 +1509,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="obj\Debug\TempPE\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

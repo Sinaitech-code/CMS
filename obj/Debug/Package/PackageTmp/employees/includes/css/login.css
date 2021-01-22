@@ -1,0 +1,47 @@
+@charset "utf-8";
+/* CSS Document */
+
+#content_holder #login{
+	width:450px;
+	border:1px solid #999999;
+	margin-left:275px;
+	margin-top:150px;
+	margin-bottom:100px;
+	display:table;
+}
+
+#content_holder #login #login_head{
+	width:450px;
+	background-color:#999999;
+	color:#FFFFFF;
+	line-height:26px;
+	font-size:14px;
+	font-weight:bold;
+	text-align:center;
+}
+
+#content_holder #login #login_form{
+	width:450px;
+}
+
+#content_holder #login #login_form .left_lable{
+	width:140px;
+	float:left;
+	text-align:right;
+	padding-right:10px;
+	padding-top:5px;
+	margin-top:5px;
+}
+
+#content_holder #login #login_form .right_lable{
+	width:300px;
+	float:right;
+	text-align:left;
+	margin-top:5px;
+}
+
+#content_holder #login #message_area{
+	width:290px;
+	padding-left:151px;
+	margin-top:6px;
+}

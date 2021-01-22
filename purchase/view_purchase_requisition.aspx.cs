@@ -75,7 +75,7 @@ namespace CMS.purchase
                 cn = new SqlConnection(ConfigurationManager.AppSettings["CMS"]);
                 cn.Open();
                 //da = new SqlDataAdapter("select requisition_id,user_id,requisition_gen_date,requisition_expected_date from mdx_purchase_requisition where projadmin_status=1 ", cn);
-                da = new SqlDataAdapter("select requisition_id,user_id,requisition_gen_date,requisition_expected_date from mdx_purchase_requisition where projadmin_status=1 and status is null", cn);
+                da = new SqlDataAdapter("select requisition_id,user_id,requisition_gen_date,requisition_expected_date from mdx_purchase_requisition where emp_status=1 and status is null", cn);
 
                 ds = new DataSet();
                 da.Fill(ds, "mdx_purchase_requisition");
